@@ -1,4 +1,6 @@
 import sys
+import logging
+from logger import logger
 #This imports the sys module, which allows access to sys.exc_info() — a function that returns info about the most recent exception.
 
 import traceback
@@ -21,3 +23,7 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message
+
+
+
+
