@@ -1,6 +1,6 @@
 import sys
 import logging
-from logger import logger
+from src.logger import logging
 #This imports the sys module, which allows access to sys.exc_info() — a function that returns info about the most recent exception.
 
 import traceback
