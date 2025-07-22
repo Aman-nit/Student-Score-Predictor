@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Performance Predictor</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        min-height: 100vh;
+      }
+
+      .container {
+        background-color: #ffffff;
+        max-width: 950px;
+        width: 100%;
+        padding: 2.5rem;
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.6rem;
+        color: #2e7d32;
+        margin-bottom: 1.2rem;
+      }
+
+      .intro {
+        font-size: 1.15rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      ul li {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      li strong {
+        color: #0277bd;
+      }
+
+      .accuracy {
+        background: #e8f5e9;
+        border-left: 5px solid #66bb6a;
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: #2e7d32;
+      }
+
+      .btn-container {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background: linear-gradient(to right, #42a5f5, #66bb6a);
+        color: white;
+        padding: 14px 36px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(102, 187, 106, 0.6);
+      }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          padding: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .intro,
+        .accuracy,
+        ul li {
+          font-size: 1rem;
+        }
+
+        .btn {
+          font-size: 1rem;
+          padding: 12px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Performance Predictor</h1>
+
+      <p class="intro">
+        This intelligent system uses a trained Machine Learning model to
+        estimate student exam performance based on various factors. It's a
+        helpful tool for analyzing academic trends and predicting student
+        outcomes before final exams.
+      </p>
+
+      <ul>
+        <li>
+          <strong>🔍 Objective:</strong> Predict the likelihood of high, medium,
+          or low exam performance for a student.
+        </li>
+        <li>
+          <strong>📊 Inputs (Features):</strong> Gender, Parental Education
+          Level, Lunch Type, Test Preparation Status, Reading Score, Writing
+          Score.
+        </li>
+        <li>
+          <strong>📁 Dataset:</strong> Based on real-world academic data of
+          1,000+ students with labeled exam outcomes.
+        </li>
+        <li>
+          <strong>⚙️ Prediction Workflow:</strong>
+          <ul>
+            <li>✔️ User inputs student details</li>
+            <li>✔️ Features are cleaned and encoded</li>
+            <li>
+              ✔️ The trained model classifies the student into "High", "Medium",
+              or "Low" performer
+            </li>
+            <li>✔️ Output is shown instantly without refreshing the form</li>
+          </ul>
+        </li>
+        <li>
+          <strong>🚀 Use Cases:</strong> Teachers, counselors, institutions, or
+          researchers aiming to identify at-risk students or understand learning
+          patterns.
+        </li>
+      </ul>
+
+      <div class="accuracy">
+        📈 <strong>Model Accuracy:</strong> ~99.4% accuracy on test data using a
+        Random Forest Classifier. The model was evaluated using metrics like
+        precision, recall, and F1-score.
+      </div>
+
+      <div class="btn-container">
+        <a href="/predict" class="btn">Try the Predictor</a>
+      </div>
+    </div>
+  </body>
+</html>
