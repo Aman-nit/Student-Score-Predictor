@@ -71,7 +71,3 @@ After testing and comparing all models, the best-performing regressor was select
 - Generalization on test data
 
 Model performance comparison charts and evaluation metrics are included in the notebook.
-
----
-
-## 🔧 Project Structure
